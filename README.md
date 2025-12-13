@@ -4,14 +4,15 @@
 The goal of this project is to create an interactive dashboard to explore congressional demographics in the United States.
 
 ## Overview
-This project uses
-
-Data source https://bioguide.congress.gov
+The bioguide dataset was downloaded as a .zip file containing a file for each member of congress throughout history. This resulted in a dataset of over 13,000 .json files that contained nested data with inconsistent structure between files.\
+This inconsistent structure required the use of NoSQL (Not Only SQL) that can handle a non-relational database. MongoDB was chosen as the platform to for extracting the data for visualization.
 
 ## Technologies Used
+
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
 ![JSON](https://img.shields.io/badge/JSON-000000?style=flat&logo=json&logoColor=white)
 
 ## Project Structure
@@ -31,19 +32,30 @@ AGE-OF-CONGRESS/
 
 ## Setup
 
-```bash
-git clone https://github.com/username/repo.git
-cd repo
-pip install -r requirements.txt
+1. Clone the repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Set up MongoDB connection
+4. Run the import script: `python import_bioguide.py`
 
-yep, got a little work to do on this part
-```
+## Usage
 
-## Helpful Resources:
+1. Import bioguide data: `python import_bioguide.py`
+2. Analyze data: Open and run `database_builder.ipynb`
+3. View outputs in the `output/` folder
 
-https://www.geocod.io/api-to-get-congressional-districts/
-https://github.com/unitedstates/congress-legislators
+## Helpful Resources
+
+**Data Sources:**
+
+- [Bioguide Data](https://bioguide.congress.gov) - Official congressional biographical directory
+- [Congress Legislators GitHub](https://github.com/unitedstates/congress-legislators) - Structured congressional data
+
+**APIs & Tools:**
+
+- [Geocodio API](https://www.geocod.io/api-to-get-congressional-districts/) - Congressional district lookup
+- [JSON Crack](https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode) - VS Code extension for visualizing complex JSON structures
 
 ## Author
 
 Jeff Oliver
+
