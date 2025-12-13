@@ -1,27 +1,49 @@
-# Age of Congress
-*under development* 
+# U.S. Congress Analysis
+![Status](https://img.shields.io/badge/status-in%20development-yellow?style=flat)
 
-This project aims to create an interactive dashboard to explore congressional demographics in the United States
+The goal of this project is to create an interactive dashboard to explore congressional demographics in the United States.
 
-Data sources
-https://bioguide.congress.gov/
+## Overview
+This project uses
 
+Data source https://bioguide.congress.gov
 
-Bioguide profiles are unzipped at this local local location:
-"D:\BioguideProfiles"
+## Technologies Used
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=flat&logo=json&logoColor=white)
 
-Potential resources:
+## Project Structure
+
+```bash
+AGE-OF-CONGRESS/
+├── src/               # Source code
+├── data/              # Raw and processed data
+│   ├── raw/
+│   └── processed/
+├── output/            # Generated outputs
+├── tests/             # Test files
+├── database_builder.ipynb
+├── requirements.txt
+└── README.md
+```
+
+## Setup
+
+```bash
+git clone https://github.com/username/repo.git
+cd repo
+pip install -r requirements.txt
+
+yep, got a little work to do on this part
+```
+
+## Helpful Resources:
+
 https://www.geocod.io/api-to-get-congressional-districts/
 https://github.com/unitedstates/congress-legislators
 
-going to try a NoSQL for handling the nested and inconsisted data
-- https://www.mongodb.com/try/download/community
-- https://www.datacamp.com/tutorial/mongodb-find?utm_cid=19589720830&utm_aid=192320614488&utm_campaign=230119_1-ps-other~dsa~tofu-tutorial_2-b2c_3-nam_4-prc_5-na_6-na_7-le_8-pdsh-go_9-nb-e_10-na_11-na&utm_loc=9016865-&utm_mtd=-c&utm_kw=&utm_source=google&utm_medium=paid_search&utm_content=ps-other~nam-en~dsa~tofu~tutorial~mongodb&gad_source=1&gad_campaignid=19589720830&gbraid=0AAAAADQ9WsG9Dzeu12LDSrAv56xpBCUU3&gclid=Cj0KCQiArt_JBhCTARIsADQZaynbuyKysy4lWHZwng5qbDFDF6O_X6QLTm4CiwyqoUQKbOILibXm5F4aAgRiEALw_wcB
+## Author
 
-
-# Process
-1. collect data
-    collected from the Bioguide from congress.gov
-2. convert to dataframes
-3. EDA
-4. build dashboard
+Jeff Oliver
