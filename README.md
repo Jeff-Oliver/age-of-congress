@@ -4,8 +4,15 @@
 The goal of this project is to create an interactive dashboard to explore congressional demographics in the United States.
 
 ## Overview
-The bioguide dataset was downloaded as a .zip file containing a file for each member of congress throughout history. This resulted in a dataset of over 13,000 .json files that contained nested data with inconsistent structure between files.\
+The bioguide dataset was downloaded as a .zip file containing a file for each member of congress throughout history. This resulted in a dataset of over 13,000 .json files that contained nested data with inconsistent structure between files.
+
 This inconsistent structure required the use of NoSQL (Not Only SQL) that can handle a non-relational database. MongoDB was chosen as the platform to for extracting the data for visualization.
+
+Mongo DB was selected to parse the data. The number of congresses to include in this analysis was the 90th to present day. This range was selected because it is after Hawaii and Alaska were admitted into the union and standardizes to the current makeup of the United States. No Dakota Territory worry about &#128521;
+
+Term start and end dates do not always align with the start and end dates of the congress itself. Member would join at non-standard dates by resignation, dying, special elections or appointments. The reason for these non-standard dates is most often found in the member's bioguide biography. Extracting this data using an AI model resulted in unacceptable errors which were not included here.
+
+These edge cases were manually updated by using Excel and the bioguide information in an unfortunate brute force method.
 
 ## Technologies Used
 
