@@ -4,15 +4,15 @@
 The goal of this project is to create an interactive dashboard to explore congressional demographics in the United States.
 
 ## Overview
-The bioguide dataset was downloaded as a .zip file containing a file for each member of congress throughout history. This resulted in a dataset of over 13,000 .json files that contained nested data with inconsistent structure between files.
+The bioguide dataset was [downloaded](https://bioguide.congress.gov/search) as a .zip file. This is a collection of .json files with one file for each member of Congress. The extracted folder contains over 13,000 .json files with nested data and inconsistent structure between files.
 
-This inconsistent structure required the use of NoSQL (Not Only SQL) that can handle a non-relational database. MongoDB was chosen as the platform to for extracting the data for visualization.
+This inconsistent structure required the use of NoSQL (Not Only SQL) that can handle a non-relational database. MongoDB was selected as the platform for data extraction.
 
-Mongo DB was selected to parse the data. The number of congresses to include in this analysis was the 90th to present day. This range was selected because it is after Hawaii and Alaska were admitted into the union and standardizes to the current makeup of the United States. No Dakota Territory worry about &#128521;
+The number of congresses to include in this analysis was the 90th to present day. This range was selected because it is after Hawaii and Alaska were admitted into the union and standardizes to the current makeup of the United States. No Dakota Territory worry about &#128521;
 
 Term start and end dates do not always align with the start and end dates of the congress itself. Member would join at non-standard dates by resignation, dying, special elections or appointments. The reason for these non-standard dates is most often found in the member's bioguide biography. Extracting this data using an AI model resulted in unacceptable errors which were not included here.
 
-These edge cases were manually updated by using Excel and the bioguide information in an unfortunate brute force method.
+These edge cases were manually updated by using Excel and the bioguide information in an unfortunate brute force method. There were several errors in the original dataset. The majority of errors were found in the "jobPositions.startDate" field.
 
 ## Technologies Used
 
@@ -23,8 +23,9 @@ These edge cases were manually updated by using Excel and the bioguide informati
 
 **Tools:**
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-1E4C7A?style=flat&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
+![JSON Crack](https://img.shields.io/badge/JSON%20Crack-000000?style=flat&logo=json&logoColor=white)
 
 ## Project Structure
 
@@ -61,10 +62,10 @@ AGE-OF-CONGRESS/
 - [Bioguide Data](https://bioguide.congress.gov) - Official congressional biographical directory
 - [Congress Legislators GitHub](https://github.com/unitedstates/congress-legislators) - Structured congressional data
 
-**APIs & Tools:**
+**APIs**
 
 - [Geocodio API](https://www.geocod.io/api-to-get-congressional-districts/) - Congressional district lookup
-- [JSON Crack](https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode) - VS Code extension for visualizing complex JSON structures
+
 
 ## Author
 
