@@ -41,6 +41,18 @@ AGE-OF-CONGRESS/
 ├── requirements.txt
 └── README.md
 ```
+## Project Walkthrough
+
+1. Unzip the bioguide.zip file (unzip_json.ipynb can be used here)
+2. Connect the unzipped folder to MongoDB
+3. Run import_bioguide.py to import data from MongoDB (note this can take a minute to complete)
+4. Build the database using database_builder.ipynb
+
+**Three tables are recommended for analysis:**
+
+1. **sessions.csv** - List of congressional sessions assembled in Excel
+2. **profiles.csv** - List of all bioguide_id's and basic info (took 2.5 minutes to run)
+3. **postings.csv** - List of congressional postings, including start and end dates
 
 ## Setup
 
