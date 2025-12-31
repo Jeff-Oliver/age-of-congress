@@ -48,11 +48,15 @@ AGE-OF-CONGRESS/
 3. Run import_bioguide.py to import data from MongoDB (note this can take a minute to complete)
 4. Build the database using database_builder.ipynb
 
-**Three tables are recommended for analysis:**
+**The following tables were extracted for analysis:**
 
 1. **sessions.csv** - List of congressional sessions assembled in Excel
 2. **profiles.csv** - List of all bioguide_id's and basic info (took 2.5 minutes to run)
 3. **postings.csv** - List of congressional postings, including start and end dates
+
+While cleaning the postings data, 18 members were found to have switched parties. This data was flattened to have a new row showing the dates served to each party.
+
+A data error was found during exploration. The start date of the first congress served would be found in the start date of the final term served.
 
 ## Setup
 
