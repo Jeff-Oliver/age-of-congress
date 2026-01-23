@@ -75,7 +75,7 @@ A data error was found during exploration. The start date of the first congress 
 4. Run `scripts/mongo_connect.py` to connect to MongoDB
 5. Use `notebooks/data_table_builder.ipynb` to extract data to .csv files
 6. Clean the data
-    1. Run `notebooks/cleaning_postings.ipynb` - do this before cleaning profiles
+    1. Run `notebooks/cleaning_postings.ipynb` - do this before cleaning profiles, this code reduces the number of profiles required.
     2. Run `notebooks/cleaning_profiles.ipynb`
 7. Analyze in Tableau
 
