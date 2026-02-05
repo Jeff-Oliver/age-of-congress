@@ -1,0 +1,1200 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <Extensions />
+    <ISO8601PeriodTypes />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <_.fcp.VizExtensions.true...VizExtensions />
+    <_.fcp.VizExtensionsDupEncodingUUID.true...VizExtensionsDupEncodingUUID />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Date Range' datatype='date' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2025-01-02#'>
+        <calculation class='tableau' formula='#2025-01-02#' />
+        <range granularity='1' max='#2025-01-02#' min='#1961-01-31#' period-type-v2='day' />
+      </column>
+    </datasource>
+    <datasource caption='postings+ (Multiple Connections)' inline='true' name='federated.07rdhmx1wt7nml13cjkkf0nz26k2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='postings_cleaned' name='excel-direct.0d12kqh0bvf2tx1fw27mn1mu8ojd'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/local_repos/age-of-congress/data/tableau/postings_cleaned.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='profiles_cleaned' name='excel-direct.19d500i1rs617m1dyiqfy05w5yqk'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/local_repos/age-of-congress/data/tableau/profiles_cleaned.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.0d12kqh0bvf2tx1fw27mn1mu8ojd' name='postings' table='[postings$]' type='table'>
+            <columns gridOrigin='A1:H18228:no:A1:H18228:0' header='yes' outcome='2'>
+              <column datatype='string' name='bioguide_id' ordinal='0' />
+              <column datatype='string' name='chamber' ordinal='1' />
+              <column datatype='integer' name='congress_number' ordinal='2' />
+              <column datatype='string' name='region_type' ordinal='3' />
+              <column datatype='string' name='region_code' ordinal='4' />
+              <column datatype='string' name='party' ordinal='5' />
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='start_date' ordinal='6' />
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='end_date' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.19d500i1rs617m1dyiqfy05w5yqk' name='profiles' table='[profiles$]' type='table'>
+            <columns gridOrigin='A1:D3085:no:A1:D3085:0' header='yes' outcome='6'>
+              <column datatype='string' name='bioguide_id' ordinal='0' />
+              <column datatype='string' name='first_name' ordinal='1' />
+              <column datatype='string' name='last_name' ordinal='2' />
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='birth_date' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[bioguide_id (profiles)]' value='[profiles].[bioguide_id]' />
+          <map key='[bioguide_id]' value='[postings].[bioguide_id]' />
+          <map key='[birth_date]' value='[profiles].[birth_date]' />
+          <map key='[chamber]' value='[postings].[chamber]' />
+          <map key='[congress_number]' value='[postings].[congress_number]' />
+          <map key='[end_date]' value='[postings].[end_date]' />
+          <map key='[first_name]' value='[profiles].[first_name]' />
+          <map key='[last_name]' value='[profiles].[last_name]' />
+          <map key='[party]' value='[postings].[party]' />
+          <map key='[region_code]' value='[postings].[region_code]' />
+          <map key='[region_type]' value='[postings].[region_type]' />
+          <map key='[start_date]' value='[postings].[start_date]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[postings]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H18228:no:A1:H18228:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bioguide_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bioguide_id]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>bioguide_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chamber</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[chamber]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>chamber</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>congress_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[congress_number]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>congress_number</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region_type]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>region_type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region_code]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>region_code</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>party</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[party]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>party</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[start_date]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>start_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[end_date]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>end_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D3085:no:A1:D3085:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bioguide_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bioguide_id (profiles)]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>bioguide_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[first_name]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>first_name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[last_name]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>last_name</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[birth_date]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>birth_date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Party Group' datatype='string' name='[Calculation_1136877461949612032]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [party] IN (&quot;Democrat&quot;, &quot;Independent Democrat&quot;, &quot;Popular Democrat&quot;) THEN &quot;Democrat&quot;&#13;&#10;ELSEIF [party] IN (&quot;Republican&quot;, &quot;Conservative&quot;, &quot;New Progressive&quot;) THEN &quot;Republican&quot;&#13;&#10;ELSEIF [party] IN (&quot;Independent&quot;, &quot;Independence Party (Minnesota)&quot;, &quot;Libertarian&quot;) THEN &quot;Independent&quot;&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Age Calculation' datatype='integer' name='[Calculation_1993687293608185859]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;,[birth_date],[Parameters].[Parameter 1])' />
+      </column>
+      <column caption='postings' datatype='table' name='[__tableau_internal_object_id__].[postings_DDA615CE039A4725A738F9CFF50BDE9E]' role='measure' type='quantitative' />
+      <column caption='profiles' datatype='table' name='[__tableau_internal_object_id__].[profiles_FBF53F29F7CA4A588416BE5CEC615287]' role='measure' type='quantitative' />
+      <column caption='Bioguide Id (Profiles)' datatype='string' name='[bioguide_id (profiles)]' role='dimension' type='nominal' />
+      <column caption='Bioguide Id' datatype='string' name='[bioguide_id]' role='dimension' type='nominal' />
+      <column caption='Birth Date' datatype='date' name='[birth_date]' role='dimension' type='ordinal' />
+      <column caption='Chamber' datatype='string' name='[chamber]' role='dimension' type='nominal' />
+      <column caption='Congress Number' datatype='string' datatype-customized='true' name='[congress_number]' role='dimension' type='nominal' />
+      <column caption='End Date' datatype='date' name='[end_date]' role='dimension' type='ordinal' />
+      <column caption='First Name' datatype='string' name='[first_name]' role='dimension' type='nominal' />
+      <column caption='Last Name' datatype='string' name='[last_name]' role='dimension' type='nominal' />
+      <column caption='Party' datatype='string' name='[party]' role='dimension' type='nominal' />
+      <column caption='Region Code' datatype='string' name='[region_code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Region Type' datatype='string' name='[region_type]' role='dimension' type='nominal' />
+      <column caption='Start Date' datatype='date' name='[start_date]' role='dimension' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/jeffb/AppData/Local/Temp/TableauTemp/#TableauTemp_19wolb10dwt7xe0zvhvkq1emg0i4.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/23/2026 02:48:26 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='postings_DDA615CE039A4725A738F9CFF50BDE9E' table='[Extract].[postings_DDA615CE039A4725A738F9CFF50BDE9E]' type='table' />
+            <relation name='profiles_FBF53F29F7CA4A588416BE5CEC615287' table='[Extract].[profiles_FBF53F29F7CA4A588416BE5CEC615287]' type='table' />
+          </relation>
+          <cols>
+            <map key='[bioguide_id (profiles)]' value='[profiles_FBF53F29F7CA4A588416BE5CEC615287].[bioguide_id]' />
+            <map key='[bioguide_id]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[bioguide_id]' />
+            <map key='[birth_date]' value='[profiles_FBF53F29F7CA4A588416BE5CEC615287].[birth_date]' />
+            <map key='[chamber]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[chamber]' />
+            <map key='[congress_number]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[congress_number]' />
+            <map key='[end_date]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[end_date]' />
+            <map key='[first_name]' value='[profiles_FBF53F29F7CA4A588416BE5CEC615287].[first_name]' />
+            <map key='[last_name]' value='[profiles_FBF53F29F7CA4A588416BE5CEC615287].[last_name]' />
+            <map key='[party]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[party]' />
+            <map key='[region_code]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[region_code]' />
+            <map key='[region_type]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[region_type]' />
+            <map key='[start_date]' value='[postings_DDA615CE039A4725A738F9CFF50BDE9E].[start_date]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>bioguide_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bioguide_id]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>bioguide_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2928</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>chamber</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[chamber]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>chamber</remote-alias>
+              <ordinal>1</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>congress_number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[congress_number]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>congress_number</remote-alias>
+              <ordinal>2</ordinal>
+              <family>postings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region_type]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>region_type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region_code]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>region_code</remote-alias>
+              <ordinal>4</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>party</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[party]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>party</remote-alias>
+              <ordinal>5</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[start_date]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>start_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>postings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>110</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[end_date]</local-name>
+              <parent-name>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</parent-name>
+              <remote-alias>end_date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>postings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[postings_DDA615CE039A4725A738F9CFF50BDE9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bioguide_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bioguide_id (profiles)]</local-name>
+              <parent-name>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</parent-name>
+              <remote-alias>bioguide_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>profiles</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3084</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[first_name]</local-name>
+              <parent-name>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</parent-name>
+              <remote-alias>first_name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>profiles</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>630</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[last_name]</local-name>
+              <parent-name>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</parent-name>
+              <remote-alias>last_name</remote-alias>
+              <ordinal>10</ordinal>
+              <family>profiles</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1579</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birth_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[birth_date]</local-name>
+              <parent-name>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</parent-name>
+              <remote-alias>birth_date</remote-alias>
+              <ordinal>11</ordinal>
+              <family>profiles</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2212</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[profiles_FBF53F29F7CA4A588416BE5CEC615287]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.953822' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.0461783' show-structure='true' user-set-layout-v2='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='bioguide_id (profiles)' />
+        <field-sort-custom-order field='first_name' />
+        <field-sort-custom-order field='last_name' />
+        <field-sort-custom-order field='birth_date' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Date Range' datatype='date' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2025-01-02#'>
+          <calculation class='tableau' formula='#2025-01-02#' />
+          <range granularity='1' max='#2025-01-02#' min='#1961-01-31#' period-type-v2='day' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='postings' id='postings_DDA615CE039A4725A738F9CFF50BDE9E'>
+            <properties context=''>
+              <relation connection='excel-direct.0d12kqh0bvf2tx1fw27mn1mu8ojd' name='postings' table='[postings$]' type='table'>
+                <columns gridOrigin='A1:H18228:no:A1:H18228:0' header='yes' outcome='2'>
+                  <column datatype='string' name='bioguide_id' ordinal='0' />
+                  <column datatype='string' name='chamber' ordinal='1' />
+                  <column datatype='integer' name='congress_number' ordinal='2' />
+                  <column datatype='string' name='region_type' ordinal='3' />
+                  <column datatype='string' name='region_code' ordinal='4' />
+                  <column datatype='string' name='party' ordinal='5' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='start_date' ordinal='6' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='end_date' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='postings_DDA615CE039A4725A738F9CFF50BDE9E' table='[Extract].[postings_DDA615CE039A4725A738F9CFF50BDE9E]' type='table' />
+            </properties>
+          </object>
+          <object caption='profiles' id='profiles_FBF53F29F7CA4A588416BE5CEC615287'>
+            <properties context=''>
+              <relation connection='excel-direct.19d500i1rs617m1dyiqfy05w5yqk' name='profiles' table='[profiles$]' type='table'>
+                <columns gridOrigin='A1:D3085:no:A1:D3085:0' header='yes' outcome='6'>
+                  <column datatype='string' name='bioguide_id' ordinal='0' />
+                  <column datatype='string' name='first_name' ordinal='1' />
+                  <column datatype='string' name='last_name' ordinal='2' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='birth_date' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='profiles_FBF53F29F7CA4A588416BE5CEC615287' table='[Extract].[profiles_FBF53F29F7CA4A588416BE5CEC615287]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[bioguide_id]' />
+              <expression op='[bioguide_id (profiles)]' />
+            </expression>
+            <first-end-point object-id='postings_DDA615CE039A4725A738F9CFF50BDE9E' />
+            <second-end-point object-id='profiles_FBF53F29F7CA4A588416BE5CEC615287' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Base Filters'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postings+ (Multiple Connections)' name='federated.07rdhmx1wt7nml13cjkkf0nz26k2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07rdhmx1wt7nml13cjkkf0nz26k2'>
+            <column caption='Chamber' datatype='string' name='[chamber]' role='dimension' type='nominal' />
+            <column caption='Congress Number' datatype='string' datatype-customized='true' name='[congress_number]' role='dimension' type='nominal' />
+            <column-instance column='[chamber]' derivation='None' name='[none:chamber:nk]' pivot='key' type='nominal' />
+            <column-instance column='[congress_number]' derivation='None' name='[none:congress_number:ok]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Representative&quot;' />
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Senator&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;100&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;101&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;102&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;103&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;104&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;105&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;106&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;107&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;108&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;109&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;110&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;111&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;112&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;113&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;114&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;115&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;116&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;117&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;118&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;87&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;88&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;89&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;90&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;91&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;92&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;93&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;94&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;95&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;96&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;97&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;98&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;99&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]</column>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C18E8E55-6672-4489-BB12-1A7C5A66EF33}' />
+    </worksheet>
+    <worksheet name='Base Filters (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postings+ (Multiple Connections)' name='federated.07rdhmx1wt7nml13cjkkf0nz26k2' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Date Range' datatype='date' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2025-01-02#'>
+              <calculation class='tableau' formula='#2025-01-02#' />
+              <range granularity='1' max='#2025-01-02#' min='#1961-01-31#' period-type-v2='day' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.07rdhmx1wt7nml13cjkkf0nz26k2'>
+            <column caption='Chamber' datatype='string' name='[chamber]' role='dimension' type='nominal' />
+            <column caption='Congress Number' datatype='string' datatype-customized='true' name='[congress_number]' role='dimension' type='nominal' />
+            <column-instance column='[chamber]' derivation='None' name='[none:chamber:nk]' pivot='key' type='nominal' />
+            <column-instance column='[congress_number]' derivation='None' name='[none:congress_number:ok]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Representative&quot;' />
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Senator&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;100&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;101&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;102&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;103&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;104&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;105&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;106&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;107&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;108&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;109&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;110&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;111&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;112&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;113&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;114&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;115&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;116&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;117&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;118&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;87&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;88&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;89&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;90&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;91&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;92&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;93&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;94&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;95&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;96&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;97&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;98&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;99&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]</column>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' field='[Parameters].[Parameter 1]' value='#f1ce63' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[Parameters].[Parameter 1]' />
+              <lod column='[Parameters].[Parameter 1]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[Parameters].[Parameter 1]</cols>
+      </table>
+      <simple-id uuid='{EA8DC7BB-0583-428F-AC0A-8C5B27594D0B}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Unique Member Count
+Congresses 87-118
+Senate and House Combined</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postings+ (Multiple Connections)' name='federated.07rdhmx1wt7nml13cjkkf0nz26k2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07rdhmx1wt7nml13cjkkf0nz26k2'>
+            <column caption='Party Group' datatype='string' name='[Calculation_1136877461949612032]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [party] IN (&quot;Democrat&quot;, &quot;Independent Democrat&quot;, &quot;Popular Democrat&quot;) THEN &quot;Democrat&quot;&#13;&#10;ELSEIF [party] IN (&quot;Republican&quot;, &quot;Conservative&quot;, &quot;New Progressive&quot;) THEN &quot;Republican&quot;&#13;&#10;ELSEIF [party] IN (&quot;Independent&quot;, &quot;Independence Party (Minnesota)&quot;, &quot;Libertarian&quot;) THEN &quot;Independent&quot;&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Bioguide Id' datatype='string' name='[bioguide_id]' role='dimension' type='nominal' />
+            <column caption='Chamber' datatype='string' name='[chamber]' role='dimension' type='nominal' />
+            <column caption='Congress Number' datatype='string' datatype-customized='true' name='[congress_number]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1136877461949612032]' derivation='None' name='[none:Calculation_1136877461949612032:nk]' pivot='key' type='nominal' />
+            <column-instance column='[chamber]' derivation='None' name='[none:chamber:nk]' pivot='key' type='nominal' />
+            <column-instance column='[congress_number]' derivation='None' name='[none:congress_number:ok]' pivot='key' type='nominal' />
+            <column caption='Party' datatype='string' name='[party]' role='dimension' type='nominal' />
+            <column-instance column='[bioguide_id]' derivation='CountD' name='[pcto:ctd:bioguide_id:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Representative&quot;' />
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Senator&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;100&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;101&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;102&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;103&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;104&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;105&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;106&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;107&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;108&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;109&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;110&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;111&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;112&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;113&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;114&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;115&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;116&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;117&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;118&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;87&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;88&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;89&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;90&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;91&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;92&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;93&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;94&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;95&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;96&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;97&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;98&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;99&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]</column>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.tableau.extension.radial' extension-url='https://tableau-extensions.tableauusercontent.com/radial/radial.html' extension-version='1.0.0' instance-id='8AB006F1D3924B499FA50BC671617277'>
+              <instance-settings />
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{AE6A4BBC-6C8A-41CC-87D9-4BA45A6ABF5B}' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:Calculation_1136877461949612032:nk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{AE6A4BBC-6C8A-41CC-87D9-4BA45A6ABF5B}' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:Calculation_1136877461949612032:nk]' custom-type-name='level' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{E7B692C8-8EB4-4821-A44A-E76085C9DEF3}' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[pcto:ctd:bioguide_id:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{E7B692C8-8EB4-4821-A44A-E76085C9DEF3}' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[pcto:ctd:bioguide_id:qk]' custom-type-name='angle' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D56DF2EE-1347-4D61-AED7-9C79B5B1F1BD}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postings+ (Multiple Connections)' name='federated.07rdhmx1wt7nml13cjkkf0nz26k2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07rdhmx1wt7nml13cjkkf0nz26k2'>
+            <column caption='Party Group' datatype='string' name='[Calculation_1136877461949612032]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [party] IN (&quot;Democrat&quot;, &quot;Independent Democrat&quot;, &quot;Popular Democrat&quot;) THEN &quot;Democrat&quot;&#13;&#10;ELSEIF [party] IN (&quot;Republican&quot;, &quot;Conservative&quot;, &quot;New Progressive&quot;) THEN &quot;Republican&quot;&#13;&#10;ELSEIF [party] IN (&quot;Independent&quot;, &quot;Independence Party (Minnesota)&quot;, &quot;Libertarian&quot;) THEN &quot;Independent&quot;&#13;&#10;ELSE &quot;Other&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Bioguide Id' datatype='string' name='[bioguide_id]' role='dimension' type='nominal' />
+            <column caption='Chamber' datatype='string' name='[chamber]' role='dimension' type='nominal' />
+            <column-instance column='[bioguide_id]' derivation='Count' name='[cnt:bioguide_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Congress Number' datatype='string' datatype-customized='true' name='[congress_number]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1136877461949612032]' derivation='None' name='[none:Calculation_1136877461949612032:nk]' pivot='key' type='nominal' />
+            <column-instance column='[chamber]' derivation='None' name='[none:chamber:nk]' pivot='key' type='nominal' />
+            <column-instance column='[congress_number]' derivation='None' name='[none:congress_number:ok]' pivot='key' type='nominal' />
+            <column caption='Party' datatype='string' name='[party]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Representative&quot;' />
+              <groupfilter function='member' level='[none:chamber:nk]' member='&quot;Senator&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;100&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;101&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;102&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;103&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;104&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;105&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;106&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;107&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;108&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;109&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;110&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;111&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;112&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;113&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;114&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;115&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;116&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;117&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;118&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;87&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;88&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;89&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;90&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;91&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;92&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;93&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;94&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;95&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;96&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;97&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;98&quot;' />
+              <groupfilter function='member' level='[none:congress_number:ok]' member='&quot;99&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:chamber:nk]</column>
+            <column>[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:congress_number:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:Calculation_1136877461949612032:nk]' />
+              <wedge-size column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[cnt:bioguide_id:qk]' />
+              <size column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[cnt:bioguide_id:qk]' />
+              <text column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:Calculation_1136877461949612032:nk]' />
+              <text column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[cnt:bioguide_id:qk]' />
+              <lod column='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[cnt:bioguide_id:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{26747F6E-ACE9-4388-939B-7FD077BC6C83}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Base Filters'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FF27E09D-FD6F-4785-AF1D-5E2465CF70E6}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Base Filters (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[Parameters].[Parameter 1]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{914FD57A-8CD9-4103-A8A6-D71A435593F1}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EDBD9344-E3BE-470A-92CB-ACC3E41BEE6F}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[none:Calculation_1136877461949612032:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.07rdhmx1wt7nml13cjkkf0nz26k2].[cnt:bioguide_id:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A078E477-D26E-463F-A9B4-55BAB6B1A569}' />
+    </window>
+  </windows>
+  <_.fcp.VizExtensions.true...referenced-extensions>
+    <_.fcp.VizExtensions.true...referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='1.0.0' id='com.tableau.extension.radial'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>A radial chart displays data in a circular format in which the total of all segment values add up to 100%, representing the whole. This visualization type creates donut charts, sunbursts, and fan charts, which are powerful means to summarize simple part-to-whole insights at a high level.</description>
+          <author email='github@tableau.com' name='Tableau' organization='Tableau' website='https://www.tableau.com/support' />
+          <min-api-version>1.12</min-api-version>
+          <source-location>
+            <url>https://tableau-extensions.tableauusercontent.com/radial/radial.html</url>
+          </source-location>
+          <icon />
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+          <encoding id='level'>
+            <display-name resource-id='level-encoding'>Ring</display-name>
+            <role-spec>
+              <role-type>discrete-dimension</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='5' />
+            <encoding-icon token='level-radial' />
+            <tooltip resource-id='level-tooltip'>Radial Ring - Drag up to five dimensions here.</tooltip>
+          </encoding>
+          <encoding id='angle'>
+            <display-name resource-id='angle-encoding'>Angle</display-name>
+            <role-spec>
+              <role-type>continuous-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='wedge' />
+            <tooltip resource-id='angle-tooltip'>Segment Angle - Drag a measure here.</tooltip>
+          </encoding>
+          <encoding id='center'>
+            <display-name resource-id='center-encoding'>Center</display-name>
+            <role-spec>
+              <role-type>continuous-measure</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='exclamation' />
+            <tooltip resource-id='center-tooltip'>Center Label - Drag a measure here</tooltip>
+          </encoding>
+        </worksheet-extension>
+        <resources>
+          <resource id='angle-encoding'>
+            <text locale='de_DE'>Winkel</text>
+            <text locale='en_GB'>Angle</text>
+            <text locale='en_US'>Angle</text>
+            <text locale='es_ES'>Ángulo</text>
+            <text locale='fr_CA'>Angle</text>
+            <text locale='fr_FR'>Angle</text>
+            <text locale='it_IT'>Angolo</text>
+            <text locale='ja_JP'>角度</text>
+            <text locale='ko_KR'>각도</text>
+            <text locale='nl_NL'>Hoek</text>
+            <text locale='pt_BR'>Ângulo</text>
+            <text locale='sv_SE'>Vinkel</text>
+            <text locale='th_TH'>มุม</text>
+            <text locale='zh_CN'>角度</text>
+            <text locale='zh_TW'>角度</text>
+          </resource>
+          <resource id='angle-tooltip'>
+            <text locale='de_DE'>Segmentwinkel - Kennzahl hierher ziehen.</text>
+            <text locale='en_GB'>Segment Angle - Drag a measure here.</text>
+            <text locale='en_US'>Segment Angle - Drag a measure here.</text>
+            <text locale='es_ES'>Ángulo del segmento - Arrastre la medida aquí.</text>
+            <text locale='fr_CA'>Angle du segment - Faites glisser la mesure ici.</text>
+            <text locale='fr_FR'>Angle du segment - Faites glisser la mesure ici.</text>
+            <text locale='it_IT'>Angolo del segmento - Trascina la misura qui.</text>
+            <text locale='ja_JP'>セグメントの角度 - メジャーを使用.</text>
+            <text locale='ko_KR'>세그먼트 각도 - 측정값 사용.</text>
+            <text locale='nl_NL'>Segmenthoek - Sleep meetwaarde hierheen.</text>
+            <text locale='pt_BR'>Ângulo do segmento - Arraste a medida aqui.</text>
+            <text locale='sv_SE'>Segmentvinkel - Dra mått hit.</text>
+            <text locale='th_TH'>มุมของส่วน - ใช้ค่าการวัด.</text>
+            <text locale='zh_CN'>分段角度 - 使用度量.</text>
+            <text locale='zh_TW'>分段角度 - 使用測量值.</text>
+          </resource>
+          <resource id='center-encoding'>
+            <text locale='de_DE'>Zentrum</text>
+            <text locale='en_GB'>Centre</text>
+            <text locale='en_US'>Center</text>
+            <text locale='es_ES'>Centro</text>
+            <text locale='fr_CA'>Centre</text>
+            <text locale='fr_FR'>Centre</text>
+            <text locale='it_IT'>Centro</text>
+            <text locale='ja_JP'>中心</text>
+            <text locale='ko_KR'>중심</text>
+            <text locale='nl_NL'>Centrum</text>
+            <text locale='pt_BR'>Centro</text>
+            <text locale='sv_SE'>Centrum</text>
+            <text locale='th_TH'>ศูนย์กลาง</text>
+            <text locale='zh_CN'>中心</text>
+            <text locale='zh_TW'>中心</text>
+          </resource>
+          <resource id='center-tooltip'>
+            <text locale='de_DE'>Text zentrieren - Kennzahl hierher ziehen.</text>
+            <text locale='en_GB'>Centre Label - Drag a measure here.</text>
+            <text locale='en_US'>Center Label - Drag a measure here.</text>
+            <text locale='es_ES'>Texto central - Arrastre la medida aquí.</text>
+            <text locale='fr_CA'>Texte central - Faites glisser la mesure ici.</text>
+            <text locale='fr_FR'>Texte central - Faites glisser la mesure ici.</text>
+            <text locale='it_IT'>Testo centrale - Trascina la misura qui.</text>
+            <text locale='ja_JP'>中央のテキスト - メジャーを使用.</text>
+            <text locale='ko_KR'>중앙 텍스트 - 측정값 사용.</text>
+            <text locale='nl_NL'>Tekst in het midden - Sleep meetwaarde hierheen.</text>
+            <text locale='pt_BR'>Texto central - Arraste a medida aqui</text>
+            <text locale='sv_SE'>Tekst in het midden - Sleep meetwaarde hierheen.</text>
+            <text locale='th_TH'>ข้อความตรงกลาง - ใช้ค่าการวัด.</text>
+            <text locale='zh_CN'>中心文字 - 使用度量.</text>
+            <text locale='zh_TW'>中心文字 - 使用測量值.</text>
+          </resource>
+          <resource id='level-encoding'>
+            <text locale='de_DE'>Hierarchieebene</text>
+            <text locale='en_GB'>Ring</text>
+            <text locale='en_US'>Ring</text>
+            <text locale='es_ES'>Anillo</text>
+            <text locale='fr_CA'>Anneau</text>
+            <text locale='fr_FR'>Anneau</text>
+            <text locale='it_IT'>Anello</text>
+            <text locale='ja_JP'>階層レベル</text>
+            <text locale='ko_KR'>원</text>
+            <text locale='nl_NL'>Ring</text>
+            <text locale='pt_BR'>Anel</text>
+            <text locale='sv_SE'>nivå</text>
+            <text locale='th_TH'>วงแหวน</text>
+            <text locale='zh_CN'>环</text>
+            <text locale='zh_TW'>環</text>
+          </resource>
+          <resource id='level-tooltip'>
+            <text locale='de_DE'>Hierarchieebene - Ziehen Sie hier bis zu fünf Dimensionen.</text>
+            <text locale='en_GB'>Radial Ring - Drag up to five dimensions here.</text>
+            <text locale='en_US'>Radial Ring - Drag up to five dimensions here.</text>
+            <text locale='es_ES'>Anillo - Arrastre aquí hasta cinco dimensiones.</text>
+            <text locale='fr_CA'>Anneau - Faites glisser jusqu&apos;à cinq dimensions ici.</text>
+            <text locale='fr_FR'>Anneau - Faites glisser jusqu&apos;à cinq dimensions ici.</text>
+            <text locale='it_IT'>Anello - Trascina qui fino a cinque dimensioni.</text>
+            <text locale='ja_JP'>階層レベル - 最大5つのディメンション.</text>
+            <text locale='ko_KR'>원 - 최대 5개의 디멘션.</text>
+            <text locale='nl_NL'>Ring - Sleep hier maximaal vijf dimensies naartoe.</text>
+            <text locale='pt_BR'>Anel - Arraste até cinco dimensões aqui.</text>
+            <text locale='sv_SE'>nivå - Dra upp till fem dimensioner här.</text>
+            <text locale='th_TH'>วงแหวน - &#9;มิติสูงสุดห้ามิติ.</text>
+            <text locale='zh_CN'>环 - 最多五个维度.</text>
+            <text locale='zh_TW'>環 - 最多五個維度.</text>
+          </resource>
+          <resource id='name'>
+            <text locale='en_US'>Radial</text>
+            <text locale='ja_JP'>サンバーストチャート</text>
+            <text locale='zh_CN'>旭日圖</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Sheet 4' />
+      </referenced-views>
+    </_.fcp.VizExtensions.true...referenced-extension>
+  </_.fcp.VizExtensions.true...referenced-extensions>
+</workbook>

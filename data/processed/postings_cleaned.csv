@@ -8665,7 +8665,7 @@ P000097,Representative,101,State,CA,Republican,1989-01-03,1991-01-02
 P000112,Representative,101,State,SC,Democrat,1989-01-03,1991-01-02
 P000148,Representative,101,State,NY,Republican,1989-01-03,1991-01-02
 P000149,Representative,101,State,NJ,Democrat,1989-01-03,1991-01-02
-P000152,Representative,101,State,VA,Democrat,1987-01-03,1991-01-02
+P000152,Representative,101,State,VA,Democrat,1989-01-03,1991-01-02
 P000170,Representative,101,State,OH,Democrat,1989-01-03,1991-01-02
 P000193,Senator,101,State,RI,Democrat,1989-01-03,1991-01-02
 P000197,Representative,101,State,CA,Democrat,1989-01-03,1991-01-02
@@ -9222,7 +9222,7 @@ P000099,Representative,102,State,AZ,Democrat,1991-01-03,1993-01-02
 P000112,Representative,102,State,SC,Democrat,1991-01-03,1993-01-02
 P000148,Representative,102,State,NY,Republican,1991-01-03,1993-01-02
 P000149,Representative,102,State,NJ,Democrat,1991-01-03,1993-01-02
-P000152,Representative,102,State,VA,Democrat,1987-01-03,1993-01-02
+P000152,Representative,102,State,VA,Democrat,1991-01-03,1993-01-02
 P000170,Representative,102,State,OH,Democrat,1991-01-03,1993-01-02
 P000193,Senator,102,State,RI,Democrat,1991-01-03,1993-01-02
 P000197,Representative,102,State,CA,Democrat,1991-01-03,1993-01-02
@@ -9782,7 +9782,7 @@ P000066,Representative,103,State,MS,Democrat,1993-01-03,1995-01-02
 P000099,Representative,103,State,AZ,Democrat,1993-01-03,1995-01-02
 P000148,Representative,103,State,NY,Republican,1993-01-03,1995-01-02
 P000149,Representative,103,State,NJ,Democrat,1993-01-03,1995-01-02
-P000152,Representative,103,State,VA,Democrat,1987-01-03,1995-01-02
+P000152,Representative,103,State,VA,Democrat,1993-01-03,1995-01-02
 P000193,Senator,103,State,RI,Democrat,1993-01-03,1995-01-02
 P000197,Representative,103,State,CA,Democrat,1993-01-05,1995-01-02
 P000215,Representative,103,State,MN,Democrat,1993-01-03,1995-01-02
@@ -10337,7 +10337,7 @@ P000066,Representative,104,State,MS,Republican,1995-01-03,1997-01-02
 P000099,Representative,104,State,AZ,Democrat,1995-01-03,1997-01-02
 P000148,Representative,104,State,NY,Republican,1995-01-03,1997-01-02
 P000149,Representative,104,State,NJ,Democrat,1995-01-03,1997-01-02
-P000152,Representative,104,State,VA,Democrat,1987-01-03,1997-01-02
+P000152,Representative,104,State,VA,Democrat,1995-01-03,1997-01-02
 P000193,Senator,104,State,RI,Democrat,1995-01-03,1997-01-03
 P000197,Representative,104,State,CA,Democrat,1995-01-04,1997-01-02
 P000258,Representative,104,State,MN,Democrat,1995-01-03,1997-01-02
@@ -10628,7 +10628,7 @@ D000407,Senator,105,State,NM,Republican,1997-01-03,1999-01-02
 D000424,Representative,105,State,CA,Democrat,1997-01-03,1999-01-02
 D000429,Representative,105,State,CA,Republican,1997-01-03,1999-01-02
 D000432,Senator,105,State,ND,Democrat,1997-01-03,1999-01-02
-D000482,Representative,105,State,PA,Democrat,1995-01-03,1999-01-02
+D000482,Representative,105,State,PA,Democrat,1997-01-03,1999-01-02
 D000492,Representative,105,State,CA,Republican,1997-01-03,1999-01-02
 D000533,Representative,105,State,TN,Republican,1997-01-03,1999-01-02
 D000549,Representative,105,State,WA,Republican,1997-01-03,1999-01-02
@@ -11178,7 +11178,7 @@ D000407,Senator,106,State,NM,Republican,1999-01-03,2001-01-02
 D000424,Representative,106,State,CA,Democrat,1999-01-03,2001-01-02
 D000429,Representative,106,State,CA,Republican,1999-01-03,2001-01-02
 D000432,Senator,106,State,ND,Democrat,1999-01-03,2001-01-02
-D000482,Representative,106,State,PA,Democrat,1995-01-03,2001-01-02
+D000482,Representative,106,State,PA,Democrat,1999-01-03,2001-01-02
 D000492,Representative,106,State,CA,Republican,1999-01-03,2001-01-02
 D000533,Representative,106,State,TN,Republican,1999-01-03,2001-01-02
 D000549,Representative,106,State,WA,Republican,1999-01-03,2001-01-02
@@ -11723,7 +11723,7 @@ D000407,Senator,107,State,NM,Republican,2001-01-03,2003-01-02
 D000424,Representative,107,State,CA,Democrat,2001-01-03,2003-01-02
 D000429,Representative,107,State,CA,Republican,2001-01-03,2003-01-02
 D000432,Senator,107,State,ND,Democrat,2001-01-03,2003-01-02
-D000482,Representative,107,State,PA,Democrat,1995-01-03,2003-01-02
+D000482,Representative,107,State,PA,Democrat,2001-01-03,2003-01-02
 D000492,Representative,107,State,CA,Republican,2001-01-03,2003-01-02
 D000533,Representative,107,State,TN,Republican,2001-01-03,2003-01-02
 D000549,Representative,107,State,WA,Republican,2001-01-03,2003-01-02
@@ -12282,7 +12282,7 @@ D000407,Senator,108,State,NM,Republican,2003-01-03,2005-01-02
 D000424,Representative,108,State,CA,Democrat,2003-01-03,2005-01-02
 D000429,Representative,108,State,CA,Republican,2003-01-03,2005-01-02
 D000432,Senator,108,State,ND,Democrat,2003-01-03,2005-01-02
-D000482,Representative,108,State,PA,Democrat,1995-01-03,2005-01-02
+D000482,Representative,108,State,PA,Democrat,2003-01-03,2005-01-02
 D000492,Representative,108,State,CA,Republican,2003-01-03,2005-01-02
 D000533,Representative,108,State,TN,Republican,2003-01-03,2005-01-02
 D000549,Representative,108,State,WA,Republican,2003-01-03,2005-01-02
@@ -12749,7 +12749,7 @@ B001246,Representative,109,State,NH,Republican,2005-01-03,2007-01-02
 B001247,Representative,109,State,FL,Republican,2005-01-03,2007-01-02
 B001248,Representative,109,State,TX,Republican,2005-01-03,2007-01-02
 B001250,Representative,109,State,UT,Republican,2005-01-03,2007-01-02
-B001251,Representative,109,State,NC,Democrat,2003-01-03,2007-01-02
+B001251,Representative,109,State,NC,Democrat,2005-01-03,2007-01-02
 B001252,Representative,109,State,GA,Democrat,2005-01-03,2007-01-02
 B001253,Representative,109,State,IL,Democrat,2005-01-03,2007-01-02
 B001254,Representative,109,State,OK,Democrat,2005-01-03,2007-01-02
@@ -12824,7 +12824,7 @@ D000399,Representative,109,State,TX,Democrat,2005-01-03,2007-01-02
 D000407,Senator,109,State,NM,Republican,2005-01-03,2007-01-02
 D000429,Representative,109,State,CA,Republican,2005-01-03,2007-01-02
 D000432,Senator,109,State,ND,Democrat,2005-01-03,2007-01-02
-D000482,Representative,109,State,PA,Democrat,1995-01-03,2007-01-02
+D000482,Representative,109,State,PA,Democrat,2005-01-03,2007-01-02
 D000492,Representative,109,State,CA,Republican,2005-01-03,2007-01-02
 D000533,Representative,109,State,TN,Republican,2005-01-03,2007-01-02
 D000563,Senator,109,State,IL,Democrat,2005-01-03,2007-01-02
@@ -13289,7 +13289,7 @@ B001245,Delegate,110,Territory,GU,Democrat,2007-01-03,2009-01-02
 B001247,Representative,110,State,FL,Republican,2007-01-03,2009-01-02
 B001248,Representative,110,State,TX,Republican,2007-01-03,2009-01-02
 B001250,Representative,110,State,UT,Republican,2007-01-03,2009-01-02
-B001251,Representative,110,State,NC,Democrat,2003-01-03,2009-01-02
+B001251,Representative,110,State,NC,Democrat,2007-01-03,2009-01-02
 B001252,Representative,110,State,GA,Democrat,2007-01-03,2009-01-02
 B001253,Representative,110,State,IL,Democrat,2007-01-03,2009-01-02
 B001254,Representative,110,State,OK,Democrat,2007-01-03,2009-01-02
@@ -13372,7 +13372,7 @@ D000399,Representative,110,State,TX,Democrat,2007-01-03,2009-01-02
 D000407,Senator,110,State,NM,Republican,2007-01-03,2009-01-02
 D000429,Representative,110,State,CA,Republican,2007-01-03,2009-01-02
 D000432,Senator,110,State,ND,Democrat,2007-01-03,2009-01-02
-D000482,Representative,110,State,PA,Democrat,1995-01-03,2009-01-02
+D000482,Representative,110,State,PA,Democrat,2007-01-03,2009-01-02
 D000492,Representative,110,State,CA,Republican,2007-01-03,2009-01-02
 D000533,Representative,110,State,TN,Republican,2007-01-03,2009-01-02
 D000563,Senator,110,State,IL,Democrat,2007-01-03,2009-01-02
@@ -13843,7 +13843,7 @@ B001245,Delegate,111,Territory,GU,Democrat,2009-01-03,2011-01-02
 B001247,Representative,111,State,FL,Republican,2009-01-03,2011-01-02
 B001248,Representative,111,State,TX,Republican,2009-01-03,2011-01-02
 B001250,Representative,111,State,UT,Republican,2009-01-03,2011-01-02
-B001251,Representative,111,State,NC,Democrat,2003-01-03,2011-01-02
+B001251,Representative,111,State,NC,Democrat,2009-01-03,2011-01-02
 B001252,Representative,111,State,GA,Democrat,2009-01-03,2011-01-02
 B001253,Representative,111,State,IL,Democrat,2009-01-03,2011-01-02
 B001254,Representative,111,State,OK,Democrat,2009-01-03,2011-01-02
@@ -13928,7 +13928,7 @@ D000355,Representative,111,State,MI,Democrat,2009-01-03,2011-01-02
 D000388,Senator,111,State,CT,Democrat,2009-01-03,2011-01-03
 D000399,Representative,111,State,TX,Democrat,2009-01-03,2011-01-02
 D000432,Senator,111,State,ND,Democrat,2009-01-03,2011-01-03
-D000482,Representative,111,State,PA,Democrat,1995-01-03,2011-01-02
+D000482,Representative,111,State,PA,Democrat,2009-01-03,2011-01-02
 D000492,Representative,111,State,CA,Republican,2009-01-03,2011-01-02
 D000533,Representative,111,State,TN,Republican,2009-01-03,2011-01-02
 D000563,Senator,111,State,IL,Democrat,2009-01-03,2011-01-02
@@ -14151,7 +14151,7 @@ M001160,Representative,111,State,WI,Democrat,2009-01-03,2011-01-02
 M001161,Representative,111,State,LA,Democrat,2009-01-03,2011-01-02
 M001162,Senator,111,State,FL,Republican,2009-01-03,2009-09-09
 M001163,Representative,111,State,CA,Democrat,2009-01-03,2011-01-02
-M001165,Representative,111,State,CA,Republican,2007-01-03,2011-01-02
+M001165,Representative,111,State,CA,Republican,2009-01-03,2011-01-02
 M001166,Representative,111,State,CA,Democrat,2009-01-03,2011-01-02
 M001167,Representative,111,State,AZ,Democrat,2009-01-03,2011-01-02
 M001168,Representative,111,State,PA,Democrat,2009-01-03,2011-01-02
@@ -14392,7 +14392,7 @@ B001244,Representative,112,State,AL,Republican,2011-01-03,2013-01-02
 B001245,Delegate,112,Territory,GU,Democrat,2011-01-03,2013-01-02
 B001248,Representative,112,State,TX,Republican,2011-01-03,2013-01-02
 B001250,Representative,112,State,UT,Republican,2011-01-03,2013-01-02
-B001251,Representative,112,State,NC,Democrat,2003-01-03,2013-01-02
+B001251,Representative,112,State,NC,Democrat,2011-01-03,2013-01-02
 B001252,Representative,112,State,GA,Democrat,2011-01-03,2013-01-02
 B001254,Representative,112,State,OK,Democrat,2011-01-03,2013-01-02
 B001255,Representative,112,State,LA,Republican,2011-01-03,2013-01-02
@@ -14483,7 +14483,7 @@ D000216,Representative,112,State,CT,Democrat,2011-01-03,2013-01-02
 D000327,Representative,112,State,WA,Democrat,2011-01-03,2013-01-02
 D000355,Representative,112,State,MI,Democrat,2011-01-03,2013-01-02
 D000399,Representative,112,State,TX,Democrat,2011-01-03,2013-01-02
-D000482,Representative,112,State,PA,Democrat,1995-01-03,2013-01-02
+D000482,Representative,112,State,PA,Democrat,2011-01-03,2013-01-02
 D000492,Representative,112,State,CA,Republican,2011-01-03,2013-01-02
 D000533,Representative,112,State,TN,Republican,2011-01-03,2013-01-02
 D000563,Senator,112,State,IL,Democrat,2011-01-03,2013-01-02
@@ -14702,7 +14702,7 @@ M001158,Representative,112,State,TX,Republican,2011-01-03,2013-01-02
 M001159,Representative,112,State,WA,Republican,2011-01-03,2013-01-02
 M001160,Representative,112,State,WI,Democrat,2011-01-03,2013-01-02
 M001163,Representative,112,State,CA,Democrat,2011-01-03,2013-01-02
-M001165,Representative,112,State,CA,Republican,2007-01-03,2013-01-02
+M001165,Representative,112,State,CA,Republican,2011-01-03,2013-01-02
 M001166,Representative,112,State,CA,Democrat,2011-01-03,2013-01-02
 M001169,Representative,112,State,CT,Democrat,2011-01-03,2013-01-02
 M001170,Senator,112,State,MO,Democrat,2011-01-03,2013-01-02
@@ -14930,7 +14930,7 @@ B001244,Representative,113,State,AL,Republican,2013-01-03,2013-08-02
 B001245,Delegate,113,Territory,GU,Democrat,2013-01-03,2015-01-02
 B001248,Representative,113,State,TX,Republican,2013-01-03,2015-01-02
 B001250,Representative,113,State,UT,Republican,2013-01-03,2015-01-02
-B001251,Representative,113,State,NC,Democrat,2003-01-03,2015-01-02
+B001251,Representative,113,State,NC,Democrat,2013-01-03,2015-01-02
 B001252,Representative,113,State,GA,Democrat,2013-01-03,2015-01-02
 B001255,Representative,113,State,LA,Republican,2013-01-03,2015-01-02
 B001256,Representative,113,State,MN,Republican,2013-01-03,2015-01-02
@@ -14942,7 +14942,7 @@ B001262,Representative,113,State,GA,Republican,2013-01-03,2015-01-02
 B001265,Senator,113,State,AK,Democrat,2013-01-03,2015-01-03
 B001267,Senator,113,State,CO,Democrat,2013-01-03,2015-01-02
 B001269,Representative,113,State,PA,Republican,2013-01-03,2015-01-02
-B001270,Representative,113,State,CA,Democrat,2011-01-03,2015-01-02
+B001270,Representative,113,State,CA,Democrat,2013-01-03,2015-01-02
 B001271,Representative,113,State,MI,Republican,2013-01-03,2015-01-02
 B001273,Representative,113,State,TN,Republican,2013-01-03,2015-01-02
 B001274,Representative,113,State,AL,Republican,2013-01-03,2015-01-02
@@ -15030,7 +15030,7 @@ D000197,Representative,113,State,CO,Democrat,2013-01-03,2015-01-02
 D000216,Representative,113,State,CT,Democrat,2013-01-03,2015-01-02
 D000355,Representative,113,State,MI,Democrat,2013-01-03,2015-01-02
 D000399,Representative,113,State,TX,Democrat,2013-01-03,2015-01-02
-D000482,Representative,113,State,PA,Democrat,1995-01-03,2015-01-02
+D000482,Representative,113,State,PA,Democrat,2013-01-03,2015-01-02
 D000533,Representative,113,State,TN,Republican,2013-01-03,2015-01-02
 D000563,Senator,113,State,IL,Democrat,2013-01-03,2015-01-02
 D000598,Representative,113,State,CA,Democrat,2013-01-03,2015-01-02
@@ -15244,7 +15244,7 @@ M001158,Representative,113,State,TX,Republican,2013-01-03,2015-01-02
 M001159,Representative,113,State,WA,Republican,2013-01-03,2015-01-02
 M001160,Representative,113,State,WI,Democrat,2013-01-03,2015-01-02
 M001163,Representative,113,State,CA,Democrat,2013-01-03,2015-01-02
-M001165,Representative,113,State,CA,Republican,2007-01-03,2015-01-02
+M001165,Representative,113,State,CA,Republican,2013-01-03,2015-01-02
 M001166,Representative,113,State,CA,Democrat,2013-01-03,2015-01-02
 M001169,Senator,113,State,CT,Democrat,2013-01-03,2015-01-02
 M001170,Senator,113,State,MO,Democrat,2013-01-03,2015-01-02
@@ -15482,14 +15482,14 @@ B001243,Representative,114,State,TN,Republican,2015-01-03,2017-01-02
 B001245,Delegate,114,Territory,GU,Democrat,2015-01-03,2017-01-02
 B001248,Representative,114,State,TX,Republican,2015-01-03,2017-01-02
 B001250,Representative,114,State,UT,Republican,2015-01-03,2017-01-02
-B001251,Representative,114,State,NC,Democrat,2003-01-03,2017-01-02
+B001251,Representative,114,State,NC,Democrat,2015-01-03,2017-01-02
 B001255,Representative,114,State,LA,Republican,2015-01-03,2017-01-02
 B001257,Representative,114,State,FL,Republican,2015-01-03,2017-01-02
 B001260,Representative,114,State,FL,Republican,2015-01-03,2017-01-02
 B001261,Senator,114,State,WY,Republican,2015-01-03,2017-01-02
 B001267,Senator,114,State,CO,Democrat,2015-01-03,2017-01-02
 B001269,Representative,114,State,PA,Republican,2015-01-03,2017-01-02
-B001270,Representative,114,State,CA,Democrat,2011-01-03,2017-01-02
+B001270,Representative,114,State,CA,Democrat,2015-01-03,2017-01-02
 B001271,Representative,114,State,MI,Republican,2015-01-03,2017-01-02
 B001273,Representative,114,State,TN,Republican,2015-01-03,2017-01-02
 B001274,Representative,114,State,AL,Republican,2015-01-03,2017-01-02
@@ -15577,7 +15577,7 @@ D000191,Representative,114,State,OR,Democrat,2015-01-03,2017-01-02
 D000197,Representative,114,State,CO,Democrat,2015-01-03,2017-01-02
 D000216,Representative,114,State,CT,Democrat,2015-01-03,2017-01-02
 D000399,Representative,114,State,TX,Democrat,2015-01-03,2017-01-02
-D000482,Representative,114,State,PA,Democrat,1995-01-03,2017-01-02
+D000482,Representative,114,State,PA,Democrat,2015-01-03,2017-01-02
 D000533,Representative,114,State,TN,Republican,2015-01-03,2017-01-02
 D000563,Senator,114,State,IL,Democrat,2015-01-03,2017-01-02
 D000598,Representative,114,State,CA,Democrat,2015-01-03,2017-01-02
@@ -15785,7 +15785,7 @@ M001158,Representative,114,State,TX,Republican,2015-01-03,2017-01-02
 M001159,Representative,114,State,WA,Republican,2015-01-03,2017-01-02
 M001160,Representative,114,State,WI,Democrat,2015-01-03,2017-01-02
 M001163,Representative,114,State,CA,Democrat,2015-01-03,2017-01-02
-M001165,Representative,114,State,CA,Republican,2007-01-03,2017-01-02
+M001165,Representative,114,State,CA,Republican,2015-01-03,2017-01-02
 M001166,Representative,114,State,CA,Democrat,2015-01-03,2017-01-02
 M001169,Senator,114,State,CT,Democrat,2015-01-03,2017-01-02
 M001170,Senator,114,State,MO,Democrat,2015-01-03,2017-01-02
@@ -16024,13 +16024,13 @@ B001243,Representative,115,State,TN,Republican,2017-01-03,2019-01-02
 B001245,Delegate,115,Territory,GU,Democrat,2017-01-03,2019-01-02
 B001248,Representative,115,State,TX,Republican,2017-01-03,2019-01-02
 B001250,Representative,115,State,UT,Republican,2017-01-03,2019-01-02
-B001251,Representative,115,State,NC,Democrat,2003-01-03,2019-01-02
+B001251,Representative,115,State,NC,Democrat,2017-01-03,2019-01-02
 B001257,Representative,115,State,FL,Republican,2017-01-03,2019-01-02
 B001260,Representative,115,State,FL,Republican,2017-01-03,2019-01-02
 B001261,Senator,115,State,WY,Republican,2017-01-03,2019-01-02
 B001267,Senator,115,State,CO,Democrat,2017-01-03,2019-01-02
 B001269,Representative,115,State,PA,Republican,2017-01-03,2019-01-02
-B001270,Representative,115,State,CA,Democrat,2011-01-03,2019-01-02
+B001270,Representative,115,State,CA,Democrat,2017-01-03,2019-01-02
 B001273,Representative,115,State,TN,Republican,2017-01-03,2019-01-02
 B001274,Representative,115,State,AL,Republican,2017-01-03,2019-01-02
 B001275,Representative,115,State,IN,Republican,2017-01-03,2019-01-02
@@ -16128,7 +16128,7 @@ D000191,Representative,115,State,OR,Democrat,2017-01-03,2019-01-02
 D000197,Representative,115,State,CO,Democrat,2017-01-03,2019-01-02
 D000216,Representative,115,State,CT,Democrat,2017-01-03,2019-01-02
 D000399,Representative,115,State,TX,Democrat,2017-01-03,2019-01-02
-D000482,Representative,115,State,PA,Democrat,1995-01-03,2019-01-02
+D000482,Representative,115,State,PA,Democrat,2017-01-03,2019-01-02
 D000533,Representative,115,State,TN,Republican,2017-01-03,2019-01-02
 D000563,Senator,115,State,IL,Democrat,2017-01-03,2019-01-02
 D000598,Representative,115,State,CA,Democrat,2017-01-03,2019-01-02
@@ -16339,7 +16339,7 @@ M001158,Representative,115,State,TX,Republican,2017-01-03,2019-01-02
 M001159,Representative,115,State,WA,Republican,2017-01-03,2019-01-02
 M001160,Representative,115,State,WI,Democrat,2017-01-03,2019-01-02
 M001163,Representative,115,State,CA,Democrat,2017-01-03,2019-01-02
-M001165,Representative,115,State,CA,Republican,2007-01-03,2019-01-02
+M001165,Representative,115,State,CA,Republican,2017-01-03,2019-01-02
 M001166,Representative,115,State,CA,Democrat,2017-01-03,2019-01-02
 M001169,Senator,115,State,CT,Democrat,2017-01-03,2019-01-02
 M001170,Senator,115,State,MO,Democrat,2017-01-03,2019-01-02
@@ -16585,12 +16585,12 @@ B001236,Senator,116,State,AR,Republican,2019-01-03,2021-01-02
 B001243,Senator,116,State,TN,Republican,2019-01-03,2021-01-02
 B001248,Representative,116,State,TX,Republican,2019-01-03,2021-01-02
 B001250,Representative,116,State,UT,Republican,2019-01-03,2021-01-02
-B001251,Representative,116,State,NC,Democrat,2003-01-03,2021-01-02
+B001251,Representative,116,State,NC,Democrat,2019-01-03,2021-01-02
 B001257,Representative,116,State,FL,Republican,2019-01-03,2021-01-02
 B001260,Representative,116,State,FL,Republican,2019-01-03,2021-01-02
 B001261,Senator,116,State,WY,Republican,2019-01-03,2021-01-02
 B001267,Senator,116,State,CO,Democrat,2019-01-03,2021-01-02
-B001270,Representative,116,State,CA,Democrat,2011-01-03,2021-01-02
+B001270,Representative,116,State,CA,Democrat,2019-01-03,2021-01-02
 B001274,Representative,116,State,AL,Republican,2019-01-03,2021-01-02
 B001275,Representative,116,State,IN,Republican,2019-01-03,2021-01-02
 B001277,Senator,116,State,CT,Democrat,2019-01-03,2021-01-02
@@ -16686,7 +16686,7 @@ D000191,Representative,116,State,OR,Democrat,2019-01-03,2021-01-02
 D000197,Representative,116,State,CO,Democrat,2019-01-03,2021-01-02
 D000216,Representative,116,State,CT,Democrat,2019-01-03,2021-01-02
 D000399,Representative,116,State,TX,Democrat,2019-01-03,2021-01-02
-D000482,Representative,116,State,PA,Democrat,1995-01-03,2021-01-02
+D000482,Representative,116,State,PA,Democrat,2019-01-03,2021-01-02
 D000563,Senator,116,State,IL,Democrat,2019-01-03,2021-01-02
 D000598,Representative,116,State,CA,Democrat,2019-01-03,2021-01-02
 D000600,Representative,116,State,FL,Republican,2019-01-03,2021-01-02
@@ -16752,7 +16752,7 @@ G000577,Representative,116,State,LA,Republican,2019-01-03,2021-01-02
 G000578,Representative,116,State,FL,Republican,2019-01-03,2021-01-02
 G000579,Representative,116,State,WI,Republican,2019-01-03,2021-01-02
 G000581,Representative,116,State,TX,Democrat,2019-01-03,2021-01-02
-G000582,Resident Commissioner,116,Territory,PR,New Progressive,2017-01-03,2021-01-02
+G000582,Resident Commissioner,116,Territory,PR,New Progressive,2019-01-03,2021-01-02
 G000583,Representative,116,State,NJ,Democrat,2019-01-03,2021-01-02
 G000584,Representative,116,State,MT,Republican,2019-01-03,2021-01-02
 G000585,Representative,116,State,CA,Democrat,2019-01-03,2021-01-02
@@ -16890,7 +16890,7 @@ M001158,Representative,116,State,TX,Republican,2019-01-03,2021-01-02
 M001159,Representative,116,State,WA,Republican,2019-01-03,2021-01-02
 M001160,Representative,116,State,WI,Democrat,2019-01-03,2021-01-02
 M001163,Representative,116,State,CA,Democrat,2019-01-03,2021-01-02
-M001165,Representative,116,State,CA,Republican,2007-01-03,2021-01-02
+M001165,Representative,116,State,CA,Republican,2019-01-03,2021-01-02
 M001166,Representative,116,State,CA,Democrat,2019-01-03,2021-01-02
 M001169,Senator,116,State,CT,Democrat,2019-01-03,2021-01-02
 M001176,Senator,116,State,OR,Democrat,2019-01-03,2021-01-02
@@ -17139,12 +17139,12 @@ B001230,Senator,117,State,WI,Democrat,2021-01-03,2023-01-02
 B001236,Senator,117,State,AR,Republican,2021-01-03,2023-01-02
 B001243,Senator,117,State,TN,Republican,2021-01-03,2023-01-02
 B001248,Representative,117,State,TX,Republican,2021-01-03,2023-01-02
-B001251,Representative,117,State,NC,Democrat,2003-01-03,2022-12-30
+B001251,Representative,117,State,NC,Democrat,2021-01-03,2022-12-30
 B001257,Representative,117,State,FL,Republican,2021-01-03,2023-01-02
 B001260,Representative,117,State,FL,Republican,2021-01-03,2023-01-02
 B001261,Senator,117,State,WY,Republican,2021-01-03,2023-01-02
 B001267,Senator,117,State,CO,Democrat,2021-01-03,2023-01-02
-B001270,Representative,117,State,CA,Democrat,2011-01-03,2022-12-09
+B001270,Representative,117,State,CA,Democrat,2021-01-03,2022-12-09
 B001274,Representative,117,State,AL,Republican,2021-01-03,2023-01-02
 B001275,Representative,117,State,IN,Republican,2021-01-03,2023-01-02
 B001277,Senator,117,State,CT,Democrat,2021-01-03,2023-01-02
@@ -17239,7 +17239,7 @@ D000191,Representative,117,State,OR,Democrat,2021-01-03,2023-01-02
 D000197,Representative,117,State,CO,Democrat,2021-01-03,2023-01-02
 D000216,Representative,117,State,CT,Democrat,2021-01-03,2023-01-02
 D000399,Representative,117,State,TX,Democrat,2021-01-03,2023-01-02
-D000482,Representative,117,State,PA,Democrat,1995-01-03,2022-12-31
+D000482,Representative,117,State,PA,Democrat,2021-01-03,2022-12-31
 D000563,Senator,117,State,IL,Democrat,2021-01-03,2023-01-02
 D000600,Representative,117,State,FL,Republican,2021-01-03,2023-01-02
 D000610,Representative,117,State,FL,Democrat,2021-01-03,2022-09-30
@@ -17305,7 +17305,7 @@ G000577,Representative,117,State,LA,Republican,2021-01-03,2023-01-02
 G000578,Representative,117,State,FL,Republican,2021-01-03,2023-01-02
 G000579,Representative,117,State,WI,Republican,2021-01-03,2023-01-02
 G000581,Representative,117,State,TX,Democrat,2021-01-03,2023-01-02
-G000582,Resident Commissioner,117,Territory,PR,New Progressive,2017-01-03,2023-01-02
+G000582,Resident Commissioner,117,Territory,PR,New Progressive,2021-01-03,2023-01-02
 G000583,Representative,117,State,NJ,Democrat,2021-01-03,2023-01-02
 G000585,Representative,117,State,CA,Democrat,2021-01-03,2023-01-02
 G000586,Representative,117,State,IL,Democrat,2021-01-03,2023-01-02
@@ -17448,7 +17448,7 @@ M001157,Representative,117,State,TX,Republican,2021-01-03,2023-01-02
 M001159,Representative,117,State,WA,Republican,2021-01-03,2023-01-02
 M001160,Representative,117,State,WI,Democrat,2021-01-03,2023-01-02
 M001163,Representative,117,State,CA,Democrat,2021-01-03,2023-01-02
-M001165,Representative,117,State,CA,Republican,2007-01-03,2023-01-02
+M001165,Representative,117,State,CA,Republican,2021-01-03,2023-01-02
 M001166,Representative,117,State,CA,Democrat,2021-01-03,2023-01-02
 M001169,Senator,117,State,CT,Democrat,2021-01-03,2023-01-02
 M001176,Senator,117,State,OR,Democrat,2021-01-03,2023-01-02
@@ -17862,7 +17862,7 @@ G000577,Representative,118,State,LA,Republican,2023-01-03,2025-01-02
 G000578,Representative,118,State,FL,Republican,2023-01-03,2024-11-13
 G000579,Representative,118,State,WI,Republican,2023-01-03,2024-04-24
 G000581,Representative,118,State,TX,Democrat,2023-01-03,2025-01-02
-G000582,Resident Commissioner,118,Territory,PR,New Progressive,2017-01-03,2025-01-01
+G000582,Resident Commissioner,118,Territory,PR,New Progressive,2023-01-03,2025-01-01
 G000583,Representative,118,State,NJ,Democrat,2023-01-03,2025-01-02
 G000585,Representative,118,State,CA,Democrat,2023-01-03,2025-01-02
 G000586,Representative,118,State,IL,Democrat,2023-01-03,2025-01-02
@@ -18002,7 +18002,7 @@ M001157,Representative,118,State,TX,Republican,2023-01-03,2025-01-02
 M001159,Representative,118,State,WA,Republican,2023-01-03,2025-01-02
 M001160,Representative,118,State,WI,Democrat,2023-01-03,2025-01-02
 M001163,Representative,118,State,CA,Democrat,2023-01-03,2025-01-02
-M001165,Representative,118,State,CA,Republican,2007-01-03,2023-12-31
+M001165,Representative,118,State,CA,Republican,2023-01-03,2023-12-31
 M001169,Senator,118,State,CT,Democrat,2023-01-03,2025-01-02
 M001176,Senator,118,State,OR,Democrat,2023-01-03,2025-01-02
 M001177,Representative,118,State,CA,Republican,2023-01-03,2025-01-02
