@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='postings+ (Multiple Connections)' inline='true' name='federated.0t53jz61uqx7xh139fr1i0sx9w8m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='postings_cleaned' name='excel-direct.0ae4j4f07ax0cx19rvwqa1nuij3d'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/local_repos/age-of-congress/data/tableau/postings_cleaned.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='profiles_cleaned' name='excel-direct.0tk4etd1sda0o210bq4vd0fesjzq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/local_repos/age-of-congress/data/tableau/profiles_cleaned.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.0ae4j4f07ax0cx19rvwqa1nuij3d' name='postings' table='[postings$]' type='table'>
+            <columns gridOrigin='A1:H18228:no:A1:H18228:0' header='yes' outcome='2'>
+              <column datatype='string' name='bioguide_id' ordinal='0' />
+              <column datatype='string' name='chamber' ordinal='1' />
+              <column datatype='string' name='congress_number' ordinal='2' />
+              <column datatype='string' name='region_type' ordinal='3' />
+              <column datatype='string' name='region_code' ordinal='4' />
+              <column datatype='string' name='party' ordinal='5' />
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='start_date' ordinal='6' />
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='end_date' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0tk4etd1sda0o210bq4vd0fesjzq' name='profiles' table='[profiles$]' type='table'>
+            <columns gridOrigin='A1:D3085:no:A1:D3085:0' header='yes' outcome='6'>
+              <column datatype='string' name='bioguide_id' ordinal='0' />
+              <column datatype='string' name='first_name' ordinal='1' />
+              <column datatype='string' name='last_name' ordinal='2' />
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='birth_date' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[bioguide_id (profiles)]' value='[profiles].[bioguide_id]' />
+          <map key='[bioguide_id]' value='[postings].[bioguide_id]' />
+          <map key='[birth_date]' value='[profiles].[birth_date]' />
+          <map key='[chamber]' value='[postings].[chamber]' />
+          <map key='[congress_number]' value='[postings].[congress_number]' />
+          <map key='[end_date]' value='[postings].[end_date]' />
+          <map key='[first_name]' value='[profiles].[first_name]' />
+          <map key='[last_name]' value='[profiles].[last_name]' />
+          <map key='[party]' value='[postings].[party]' />
+          <map key='[region_code]' value='[postings].[region_code]' />
+          <map key='[region_type]' value='[postings].[region_type]' />
+          <map key='[start_date]' value='[postings].[start_date]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[postings]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H18228:no:A1:H18228:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D3085:no:A1:D3085:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bioguide_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bioguide_id]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>bioguide_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chamber</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[chamber]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>chamber</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>congress_number</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[congress_number]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>congress_number</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region_type]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>region_type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region_code]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>region_code</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>party</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[party]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>party</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[start_date]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>start_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[end_date]</local-name>
+            <parent-name>[postings]</parent-name>
+            <remote-alias>end_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bioguide_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[bioguide_id (profiles)]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>bioguide_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[first_name]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>first_name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[last_name]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>last_name</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[birth_date]</local-name>
+            <parent-name>[profiles]</parent-name>
+            <remote-alias>birth_date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Party Group' datatype='string' name='[Calculation_1929511001332297728]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [party] IN (&quot;Republican&quot;, &quot;Conservative&quot;) THEN &quot;Republican&quot;&#13;&#10;ELSEIF [party] IN (&quot;Democrat&quot;) THEN &quot;Democrat&quot;&#13;&#10;ELSE &quot;Independent&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Min Date' datatype='date' name='[Calculation_1929511001346080772]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='MIN([start_date])' />
+      </column>
+      <column caption='Max Date' datatype='date' name='[Calculation_1929511001346760712]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='MAX([end_date])' />
+      </column>
+      <column caption='postings' datatype='table' name='[__tableau_internal_object_id__].[postings_8DF88ED7C88E41158CF383D5E29BD499]' role='measure' type='quantitative' />
+      <column caption='profiles' datatype='table' name='[__tableau_internal_object_id__].[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]' role='measure' type='quantitative' />
+      <column caption='Bioguide Id (Profiles)' datatype='string' name='[bioguide_id (profiles)]' role='dimension' type='nominal' />
+      <column caption='Bioguide Id' datatype='string' name='[bioguide_id]' role='dimension' type='nominal' />
+      <column caption='Birth Date' datatype='date' name='[birth_date]' role='dimension' type='ordinal' />
+      <column caption='Chamber' datatype='string' name='[chamber]' role='dimension' type='nominal' />
+      <column caption='Congress Number' datatype='string' name='[congress_number]' role='dimension' type='nominal' />
+      <column caption='End Date' datatype='date' name='[end_date]' role='dimension' type='ordinal' />
+      <column caption='First Name' datatype='string' name='[first_name]' role='dimension' type='nominal' />
+      <column caption='Last Name' datatype='string' name='[last_name]' role='dimension' type='nominal' />
+      <column caption='Party' datatype='string' name='[party]' role='dimension' type='nominal' />
+      <column caption='Region Code' datatype='string' name='[region_code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Region Type' datatype='string' name='[region_type]' role='dimension' type='nominal' />
+      <column caption='Start Date' datatype='date' name='[start_date]' role='dimension' type='ordinal' />
+      <drill-paths>
+        <drill-path name='Party Group, Party'>
+          <field>[Calculation_1929511001332297728]</field>
+          <field>[party]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/jeffb/AppData/Local/Temp/TableauTemp/#TableauTemp_163m15z1fzor781a56qce1mh2l8g.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='02/06/2026 03:53:16 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='postings_8DF88ED7C88E41158CF383D5E29BD499' table='[Extract].[postings_8DF88ED7C88E41158CF383D5E29BD499]' type='table' />
+            <relation name='profiles_383E9B0DE8F34FD4AF086AFEF553DFF2' table='[Extract].[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]' type='table' />
+          </relation>
+          <cols>
+            <map key='[bioguide_id (profiles)]' value='[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2].[bioguide_id]' />
+            <map key='[bioguide_id]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[bioguide_id]' />
+            <map key='[birth_date]' value='[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2].[birth_date]' />
+            <map key='[chamber]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[chamber]' />
+            <map key='[congress_number]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[congress_number]' />
+            <map key='[end_date]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[end_date]' />
+            <map key='[first_name]' value='[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2].[first_name]' />
+            <map key='[last_name]' value='[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2].[last_name]' />
+            <map key='[party]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[party]' />
+            <map key='[region_code]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[region_code]' />
+            <map key='[region_type]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[region_type]' />
+            <map key='[start_date]' value='[postings_8DF88ED7C88E41158CF383D5E29BD499].[start_date]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='postings+ (Multiple Connections)' increment-value='%null%' refresh-type='create' rows-inserted='21311' timestamp-start='2026-02-06 15:53:15.492' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>bioguide_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bioguide_id]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>bioguide_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3276</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>chamber</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[chamber]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>chamber</remote-alias>
+              <ordinal>1</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>congress_number</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[congress_number]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>congress_number</remote-alias>
+              <ordinal>2</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region_type]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>region_type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region_code]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>region_code</remote-alias>
+              <ordinal>4</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>56</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>party</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[party]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>party</remote-alias>
+              <ordinal>5</ordinal>
+              <family>postings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[start_date]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>start_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>postings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>101</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[end_date]</local-name>
+              <parent-name>[postings_8DF88ED7C88E41158CF383D5E29BD499]</parent-name>
+              <remote-alias>end_date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>postings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>157</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[postings_8DF88ED7C88E41158CF383D5E29BD499]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bioguide_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bioguide_id (profiles)]</local-name>
+              <parent-name>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</parent-name>
+              <remote-alias>bioguide_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>profiles</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3084</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[first_name]</local-name>
+              <parent-name>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</parent-name>
+              <remote-alias>first_name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>profiles</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>630</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[last_name]</local-name>
+              <parent-name>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</parent-name>
+              <remote-alias>last_name</remote-alias>
+              <ordinal>10</ordinal>
+              <family>profiles</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1579</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birth_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[birth_date]</local-name>
+              <parent-name>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</parent-name>
+              <remote-alias>birth_date</remote-alias>
+              <ordinal>11</ordinal>
+              <family>profiles</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2212</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='bioguide_id' />
+        <field-sort-custom-order field='chamber' />
+        <field-sort-custom-order field='congress_number' />
+        <field-sort-custom-order field='region_type' />
+        <field-sort-custom-order field='region_code' />
+        <field-sort-custom-order field='party' />
+        <field-sort-custom-order field='Calculation_1929511001332297728' />
+        <field-sort-custom-order field='start_date' />
+        <field-sort-custom-order field='Calculation_2094455337716727808' />
+        <field-sort-custom-order field='Calculation_1929511001346080772' />
+        <field-sort-custom-order field='end_date' />
+        <field-sort-custom-order field='Calculation_1929511001346760712' />
+      </field-sort-info>
+      <filter class='categorical' column='[chamber]' filter-group='2'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[chamber]' member='&quot;Representative&quot;' />
+          <groupfilter function='member' level='[chamber]' member='&quot;Senator&quot;' />
+        </groupfilter>
+      </filter>
+      <filter class='categorical' column='[congress_number]' filter-group='2'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[congress_number]' member='&quot;100&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;101&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;102&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;103&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;104&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;105&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;106&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;107&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;108&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;109&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;110&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;111&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;112&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;113&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;114&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;115&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;116&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;117&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;118&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;87&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;88&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;89&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;90&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;91&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;92&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;93&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;94&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;95&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;96&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;97&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;98&quot;' />
+          <groupfilter function='member' level='[congress_number]' member='&quot;99&quot;' />
+        </groupfilter>
+      </filter>
+      <object-graph>
+        <objects>
+          <object caption='postings' id='postings_8DF88ED7C88E41158CF383D5E29BD499'>
+            <properties context=''>
+              <relation connection='excel-direct.0ae4j4f07ax0cx19rvwqa1nuij3d' name='postings' table='[postings$]' type='table'>
+                <columns gridOrigin='A1:H18228:no:A1:H18228:0' header='yes' outcome='2'>
+                  <column datatype='string' name='bioguide_id' ordinal='0' />
+                  <column datatype='string' name='chamber' ordinal='1' />
+                  <column datatype='string' name='congress_number' ordinal='2' />
+                  <column datatype='string' name='region_type' ordinal='3' />
+                  <column datatype='string' name='region_code' ordinal='4' />
+                  <column datatype='string' name='party' ordinal='5' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='start_date' ordinal='6' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='end_date' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='postings_8DF88ED7C88E41158CF383D5E29BD499' table='[Extract].[postings_8DF88ED7C88E41158CF383D5E29BD499]' type='table' />
+            </properties>
+          </object>
+          <object caption='profiles' id='profiles_383E9B0DE8F34FD4AF086AFEF553DFF2'>
+            <properties context=''>
+              <relation connection='excel-direct.0tk4etd1sda0o210bq4vd0fesjzq' name='profiles' table='[profiles$]' type='table'>
+                <columns gridOrigin='A1:D3085:no:A1:D3085:0' header='yes' outcome='6'>
+                  <column datatype='string' name='bioguide_id' ordinal='0' />
+                  <column datatype='string' name='first_name' ordinal='1' />
+                  <column datatype='string' name='last_name' ordinal='2' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='birth_date' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='profiles_383E9B0DE8F34FD4AF086AFEF553DFF2' table='[Extract].[profiles_383E9B0DE8F34FD4AF086AFEF553DFF2]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[bioguide_id]' />
+              <expression op='[bioguide_id (profiles)]' />
+            </expression>
+            <first-end-point object-id='postings_8DF88ED7C88E41158CF383D5E29BD499' />
+            <second-end-point object-id='profiles_383E9B0DE8F34FD4AF086AFEF553DFF2' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postings+ (Multiple Connections)' name='federated.0t53jz61uqx7xh139fr1i0sx9w8m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t53jz61uqx7xh139fr1i0sx9w8m'>
+            <column caption='Party Group' datatype='string' name='[Calculation_1929511001332297728]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [party] IN (&quot;Republican&quot;, &quot;Conservative&quot;) THEN &quot;Republican&quot;&#13;&#10;ELSEIF [party] IN (&quot;Democrat&quot;) THEN &quot;Democrat&quot;&#13;&#10;ELSE &quot;Independent&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Bioguide Id' datatype='string' name='[bioguide_id]' role='dimension' type='nominal' />
+            <column caption='Congress Number' datatype='string' name='[congress_number]' role='dimension' type='nominal' />
+            <column-instance column='[bioguide_id]' derivation='CountD' name='[ctd:bioguide_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1929511001332297728]' derivation='None' name='[none:Calculation_1929511001332297728:nk]' pivot='key' type='nominal' />
+            <column-instance column='[congress_number]' derivation='None' name='[none:congress_number:nk]' pivot='key' type='nominal' />
+            <column caption='Party' datatype='string' name='[party]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:Calculation_1929511001332297728:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1929511001332297728:nk]' member='&quot;Democrat&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:congress_number:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:congress_number:nk]' member='&quot;116&quot;' />
+              <groupfilter function='member' level='[none:congress_number:nk]' member='&quot;117&quot;' />
+              <groupfilter function='member' level='[none:congress_number:nk]' member='&quot;118&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:Calculation_1929511001332297728:nk]</column>
+            <column>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:congress_number:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[ctd:bioguide_id:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C2F78918-50C9-437A-A19E-259902F9D59A}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:congress_number:nk]' type='filter' />
+            <card param='[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:Calculation_1929511001332297728:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:Calculation_1929511001332297728:nk]</field>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:Calculation_1929511001345953795:qk]</field>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:Calculation_1929511001346633735:qk]</field>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:bioguide_id:nk]</field>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[none:congress_number:nk]</field>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[usr:Calculation_1929511001346760712:ok]</field>
+            <field>[federated.0t53jz61uqx7xh139fr1i0sx9w8m].[yr:end_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0B23BCA1-51C6-4BBB-A9C2-C028B94F352A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='24' name='Sheet 1' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACQElEQVRYhe2YQWgTQRSG/0rASPdQUhBcaA855JhDKfRQD0oHgotgY20xEoWCVkph6cn0
+      IIqoeCgVGhBsQA+ReKhKIQhGMkLQFFFCYQNdimADOTQEGhtJUlOIPA+JpTFZhJQya80Pe5h5
+      /8y+/XbfY9gOIiL8xzoiOgHRagMQnYBotQGITkC02gBEJyBabQCiExCtNgDRCexXO99zKFVa
+      X/8PANCxcFmBci2I9SbRDw8mEUq3vrv5Aegcb20XMPzzNXgzAvuU6QHoPIYeNoZhJoEfAAGT
+      A9DBYz1gpyUcZwwS503LIL/2Ere9QxjsH8TQiIrASr7eUNnE5+ANeBUFijKCq7eeI1msxcjM
+      Wp0ntxqmAhERZSk0PkoLX+stUd8Aee6/o1S5Oi6nXpDq8tCTXd8WRX0u8swtU6ZMRFSmzPIb
+      +pitRk0NYHXeTWq4sDvOhsZp9A8CUV8jlMLSFJ2Z035vQu6pJdoyuIfloD/ilqX7MRNMYwOn
+      0H9nb2AGAbaICbvxUsnphBTfQAVOpONxyOwpugy8pu0BOufovRlDIpGou8Kq9a/NsJhMoijL
+      sACwOxxY0zQYHRVMCyAS6QVjUsO8zBisBs0QACqbEdx7vA3vRWd14uQYFO0RAvrOHlMe+VoT
+      NG0JcDvDYuPzAzIDs06Dr09Uy+BoDq8mXXjvGMCJHxpWUt04N/sQl+Sa3+KE6r+Cu9MKznb1
+      oe9YBp++2HD9mR/nJaCD6DD8Fa6glPuGEjph6+40eKvNPYcEQOv6BdNAeqM+uYyVAAAAAElF
+      TkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
